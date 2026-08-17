@@ -81,23 +81,26 @@ ist das Wurzelverzeichnis.
   erst nach ausdrücklichem Klick nachgeladen. Daneben stehen Direktlinks für
   Google Maps, Apple Karten und OpenStreetMap zur Wahl der Karten-App.
 
-## Offene Punkte
+## Rechtstexte
 
-In `impressum.html` und `datenschutz.html` sind die Stellen, die nur Estelle
-Federer selbst ausfüllen kann, im Fliesstext hervorgehoben (sandfarben
-hinterlegt, Klasse `todo`):
+Impressum und Datenschutzerklärung sind vollständig; es sind keine Angaben
+mehr offen.
 
-- UID-/MWST-Nummer, sofern die Praxis mehrwertsteuerpflichtig oder im
-  Handelsregister eingetragen ist
+- **Telefonnummer** — wird bewusst nicht veröffentlicht. Das Impressum weist
+  darauf hin, dass die Kontaktaufnahme per E-Mail erfolgt. Rechtlich genügen
+  Name, Adresse und eine E-Mail-Adresse (UWG Art. 3 Abs. 1 lit. s).
+- **UID-/MWST-Nummer** — entfällt. Die Praxis ist nicht im Handelsregister
+  eingetragen; eine Nummer müsste nur bei Eintrag oder Mehrwertsteuerpflicht
+  angegeben werden.
+- **Bildnachweise** — entfallen, die Fotografien stammen aus eigener Hand.
+  Nachgewiesen sind allein die Kartendaten (OpenStreetMap, ODbL).
+- **Hosting** — Infomaniak Network AG, Les Acacias (Genf). Infomaniak nennt
+  keine konkrete Aufbewahrungsdauer für Webserver-Logs; die
+  Datenschutzerklärung formuliert sie deshalb zweckgebunden.
 
-Nach dem Ausfüllen das `<span class="todo">…</span>` entfernen.
-
-Bereits geklärt: Eine Telefonnummer wird bewusst nicht veröffentlicht; das
-Impressum weist darauf hin, dass die Kontaktaufnahme per E-Mail erfolgt. Die
-Fotografien stammen aus eigener Hand, ein Bildnachweis ist daher nicht nötig.
-Gehostet wird bei der Infomaniak Network AG in Les Acacias (Genf); Infomaniak
-nennt keine konkrete Aufbewahrungsdauer für Webserver-Logs, die
-Datenschutzerklärung formuliert sie deshalb zweckgebunden.
+Sollte künftig doch eine Stelle offenbleiben, lässt sie sich mit
+`<span class="todo">…</span>` sichtbar markieren — die Klasse ist im
+Stylesheet weiterhin vorhanden.
 
 ## Inhalte
 
