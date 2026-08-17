@@ -6,7 +6,7 @@
 <title>Kontakt — Fokus Kind Familienberatung</title>
 <meta name="description" content="Kontakt zu Estelle Federer, Fokus Kind Familienberatung, Engestrasse 23, 3012 Bern. Terminanfragen per E-Mail.">
 <link rel="canonical" href="https://fokuskind-familienberatung.ch/kontakt.html">
-<meta name="theme-color" content="#16333b">
+<meta name="theme-color" content="#16181f">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <meta property="og:type" content="website">
@@ -28,7 +28,7 @@
 <header class="masthead">
   <div class="wrap masthead__inner">
     <a class="brand" href="index.html">
-      <span class="brand__mark" aria-hidden="true"></span>
+      <img class="brand__logo" src="assets/img/logo.svg" alt="" width="60" height="60">
       <span class="brand__name">Fokus Kind<span>Familienberatung</span></span>
     </a>
     <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="hauptnavigation">
@@ -79,10 +79,31 @@
           Engestrasse 23<br>
           3012 Bern
         </address>
-        <a class="map-link" href="https://www.openstreetmap.org/search?query=Engestrasse%2023%2C%203012%20Bern" target="_blank" rel="noopener">
-          <strong>Auf der Karte ansehen</strong>
-          <span>Öffnet OpenStreetMap in einem neuen Fenster. Diese Website bindet keine Karten­dienste ein und setzt keine Cookies.</span>
-        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight section--band">
+    <div class="wrap">
+      <div class="karte" data-karte>
+        <div class="karte__rahmen" data-karte-rahmen>
+          <img src="assets/img/karte-engestrasse.jpg" alt="Kartenausschnitt mit der Engestrasse 23 in Bern, markiert zwischen Bonstettenstrasse und Diesbachstrasse." width="1000" height="500" loading="lazy" decoding="async">
+          <span class="karte__pin" aria-hidden="true"></span>
+        </div>
+        <div class="karte__leiste">
+          <button class="btn btn--ghost karte__laden" type="button" data-karte-laden hidden>Interaktive Karte laden</button>
+          <div class="karte__apps">
+            <span class="karte__apps-label">In Karten-App öffnen</span>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Engestrasse%2023%2C%203012%20Bern" target="_blank" rel="noopener">Google Maps</a>
+            <a href="https://maps.apple.com/?q=Engestrasse%2023,%203012%20Bern&amp;ll=46.9583414,7.4385527" target="_blank" rel="noopener">Apple Karten</a>
+            <a href="https://www.openstreetmap.org/?mlat=46.9583414&amp;mlon=7.4385527#map=18/46.95834/7.43855" target="_blank" rel="noopener">OpenStreetMap</a>
+          </div>
+        </div>
+        <p class="karte__hinweis">
+          Kartenausschnitt: Kartendaten © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>-Mitwirkende.
+          Die interaktive Karte stammt von Google und wird erst geladen, wenn Sie darauf klicken – dabei werden Ihre IP-Adresse und Gerätedaten an Google übertragen.
+          Näheres in der <a href="datenschutz.html">Datenschutzerklärung</a>.
+        </p>
       </div>
     </div>
   </section>
@@ -108,7 +129,7 @@
     <div class="wrap">
       <div class="footer__grid">
         <div class="footer__brand">
-          <span class="brand__mark" aria-hidden="true"></span>
+          <img class="brand__logo" src="assets/img/logo-invers.svg" alt="" width="84" height="84">
           <p>Fokus Kind<br>Familienberatung</p>
         </div>
         <div>

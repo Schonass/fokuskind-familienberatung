@@ -24,9 +24,9 @@ lassen sich unverändert auf jeden Webspace kopieren.
 ```
 assets/
   css/styles.css     Gesamtes Design-System (Farben, Typografie, Raster)
-  js/site.js         Mobile Navigation, Kopfzeile, Jahreszahl — sonst nichts
+  js/site.js         Mobile Navigation, Kopfzeile, Karte, Jahreszahl — sonst nichts
   fonts/             Fraunces und Karla als woff2, lokal ausgeliefert
-  img/               Logo, Signet, Porträt, Titelbild, Favicon, OG-Bild
+  img/               Logo, Signet, Porträt, Titelbild, Karte, Favicon, OG-Bild
 robots.txt, sitemap.xml
 ```
 
@@ -55,11 +55,16 @@ ist das Wurzelverzeichnis.
 - **Schrift** — Fraunces (Auszeichnung) und Karla (Lesetext), beide unter der
   SIL Open Font License 1.1, lokal eingebunden. Es besteht keine Verbindung zu
   Google Fonts oder einem anderen CDN.
-- **Farbe** — eine Leitfarbe (Petrol `#16333b`), ein Akzent (Ton `#a65a34`),
-  warm gestimmte Neutrale (`#fbf8f3`, `#f2ebe0`). Alle Text-Hintergrund-Paare
-  erreichen mindestens WCAG AA.
-- **Signet** — die Kinder-Linienzeichnung aus dem bestehenden Logo, freigestellt
-  und als eigenständiges Bildzeichen (`assets/img/signet.svg`) verwendet.
+- **Farbe** — direkt aus dem Logo abgeleitet: Markenblau `#233dff` als einziger
+  Akzent, Logoschwarz `#16181f` als Leitfarbe, kühl gestimmte Neutrale
+  (`#fcfcfe`, `#eff1f8`) dazwischen. Alle Text-Hintergrund-Paare erreichen
+  mindestens WCAG AA.
+- **Logo** — führt Kopf- und Fussbereich (`logo.svg`, für dunklen Grund
+  einfarbig als `logo-invers.svg`). Beide Dateien sind auf die Palettenwerte
+  eingefärbt, damit Logo und Seite exakt denselben Blauton zeigen.
+- **Signet** — die Kinder-Linienzeichnung aus dem Logo, freigestellt und als
+  eigenständiges Bildzeichen (`assets/img/signet.svg`) für die Wasserzeichen
+  in Seitenköpfen und Kontaktband verwendet.
 - **Raster** — Abstände und Schriftgrössen stammen durchgehend aus den
   CSS-Variablen am Anfang von `styles.css`. Wer Abstände oder Farben ändern
   will, ändert sie dort einmal.
@@ -69,8 +74,12 @@ ist das Wurzelverzeichnis.
 - Sprunglink zum Inhalt, sichtbare Fokusringe, `aria-current` in der Navigation
 - Bedienbar per Tastatur, Navigation mit `Esc` schliessbar
 - `prefers-reduced-motion` wird beachtet, Druckstylesheet vorhanden
-- Keine Cookies, kein Analytics, keine eingebettete Karte, keine externen
-  Requests — die Seite lädt ausschliesslich eigene Dateien
+- Keine Cookies, kein Analytics, keine externen Requests beim Seitenaufruf —
+  die Seite lädt zunächst ausschliesslich eigene Dateien
+- Die Karte auf der Kontaktseite ist eine Zwei-Klick-Lösung: sichtbar ist ein
+  lokal gespeicherter Kartenausschnitt (OpenStreetMap, ODbL); Google Maps wird
+  erst nach ausdrücklichem Klick nachgeladen. Daneben stehen Direktlinks für
+  Google Maps, Apple Karten und OpenStreetMap zur Wahl der Karten-App.
 
 ## Offene Punkte
 
@@ -78,11 +87,15 @@ In `impressum.html` und `datenschutz.html` sind die Stellen, die nur Estelle
 Federer selbst ausfüllen kann, im Fliesstext hervorgehoben (sandfarben
 hinterlegt, Klasse `todo`):
 
-- Telefonnummer, UID/MWST-Nummer, allfällige Berufsbezeichnung
-- Bildnachweise für Porträtfotografie und Titelbild
+- UID-/MWST-Nummer, sofern die Praxis mehrwertsteuerpflichtig oder im
+  Handelsregister eingetragen ist
 - Name und Sitz des Hosting-Anbieters sowie Aufbewahrungsdauer der Logfiles
 
 Nach dem Ausfüllen jeweils das `<span class="todo">…</span>` entfernen.
+
+Eine Telefonnummer wird bewusst nicht veröffentlicht; das Impressum weist
+darauf hin, dass die Kontaktaufnahme per E-Mail erfolgt. Die Fotografien
+stammen aus eigener Hand, ein Bildnachweis ist daher nicht nötig.
 
 ## Inhalte
 

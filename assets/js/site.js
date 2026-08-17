@@ -43,6 +43,33 @@
     else if (wide.addListener) wide.addListener(reset);
   }
 
+  /* --- Karte: Google erst auf Klick nachladen ---------------------------- */
+
+  var karteLaden = document.querySelector('[data-karte-laden]');
+  var karteRahmen = document.querySelector('[data-karte-rahmen]');
+
+  if (karteLaden && karteRahmen) {
+    /* Der Knopf erscheint nur, wenn er auch etwas bewirken kann. */
+    karteLaden.hidden = false;
+
+    karteLaden.addEventListener('click', function () {
+      var iframe = document.createElement('iframe');
+      iframe.src =
+        'https://www.google.com/maps?q=' +
+        encodeURIComponent('Engestrasse 23, 3012 Bern') +
+        '&z=16&output=embed';
+      iframe.title = 'Karte von Google: Engestrasse 23, 3012 Bern';
+      iframe.setAttribute('loading', 'lazy');
+      iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+      iframe.setAttribute('allowfullscreen', '');
+
+      karteRahmen.textContent = '';
+      karteRahmen.appendChild(iframe);
+      karteLaden.hidden = true;
+      iframe.focus();
+    });
+  }
+
   /* --- Jahreszahl im Impressumsvermerk ---------------------------------- */
 
   var jahr = document.getElementById('jahr');
