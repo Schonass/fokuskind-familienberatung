@@ -89,13 +89,15 @@ hinterlegt, Klasse `todo`):
 
 - UID-/MWST-Nummer, sofern die Praxis mehrwertsteuerpflichtig oder im
   Handelsregister eingetragen ist
-- Name und Sitz des Hosting-Anbieters sowie Aufbewahrungsdauer der Logfiles
 
-Nach dem Ausfüllen jeweils das `<span class="todo">…</span>` entfernen.
+Nach dem Ausfüllen das `<span class="todo">…</span>` entfernen.
 
-Eine Telefonnummer wird bewusst nicht veröffentlicht; das Impressum weist
-darauf hin, dass die Kontaktaufnahme per E-Mail erfolgt. Die Fotografien
-stammen aus eigener Hand, ein Bildnachweis ist daher nicht nötig.
+Bereits geklärt: Eine Telefonnummer wird bewusst nicht veröffentlicht; das
+Impressum weist darauf hin, dass die Kontaktaufnahme per E-Mail erfolgt. Die
+Fotografien stammen aus eigener Hand, ein Bildnachweis ist daher nicht nötig.
+Gehostet wird bei der Infomaniak Network AG in Les Acacias (Genf); Infomaniak
+nennt keine konkrete Aufbewahrungsdauer für Webserver-Logs, die
+Datenschutzerklärung formuliert sie deshalb zweckgebunden.
 
 ## Inhalte
 
