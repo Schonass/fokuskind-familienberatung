@@ -337,7 +337,7 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   gap: var(--sp-5);
-  min-height: 5.5rem;
+  min-height: 5rem;
 }
 
 .brand {
@@ -349,15 +349,15 @@ a:hover {
 }
 
 .brand__logo {
-  width: 4.25rem;
-  height: 4.25rem;
+  width: 3.5rem;
+  height: 3.5rem;
   flex: none;
 }
 
 @media (max-width: 30rem) {
   .brand__logo {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -454,7 +454,7 @@ a:hover {
 
   .nav {
     position: fixed;
-    inset: 5.5rem 0 auto;
+    inset: 5rem 0 auto;
     background: var(--paper);
     border-bottom: 1px solid var(--line);
     padding: var(--sp-4) 0 var(--sp-6);
@@ -516,6 +516,12 @@ a:hover {
     grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
     gap: clamp(3rem, 6vw, 5.5rem);
   }
+}
+
+.hero__logo {
+  width: clamp(6.5rem, 4.5rem + 7vw, 10rem);
+  height: auto;
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
 }
 
 .hero h1 {
@@ -660,7 +666,7 @@ a:hover {
   line-height: 1.5;
 }
 
-/* ---------- Themenfelder (nummerierte Redaktionsliste) ------------------- */
+/* ---------- Themenfelder ------------------------------------------------- */
 
 .themen {
   display: grid;
@@ -679,21 +685,8 @@ a:hover {
 }
 
 .thema {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: var(--sp-5);
   padding-block: clamp(1.75rem, 3.5vw, 2.5rem);
   border-bottom: 1px solid var(--line);
-}
-
-.thema__num {
-  font-family: var(--font-display);
-  font-size: var(--fs-numeral);
-  font-weight: 300;
-  line-height: 0.85;
-  color: var(--blue);
-  font-variant-numeric: tabular-nums;
-  letter-spacing: -0.04em;
 }
 
 .thema h3 {
@@ -709,12 +702,26 @@ a:hover {
 }
 
 .thema li {
+  position: relative;
+  padding-left: var(--sp-6);
   color: var(--ink-70);
   line-height: 1.55;
 }
 
 .thema li + li {
   margin-top: var(--sp-3);
+}
+
+/* Aufzählungspunkt im Markenblau, auf die erste Zeile ausgerichtet */
+.thema li::before {
+  content: '';
+  position: absolute;
+  left: 0.25rem;
+  top: 0.62em;
+  width: 0.4375rem;
+  height: 0.4375rem;
+  border-radius: 50%;
+  background: var(--blue);
 }
 
 /* ---------- Wegweiser (Index-Liste) -------------------------------------- */
@@ -863,9 +870,8 @@ a:hover {
 }
 
 .step {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: var(--sp-5);
+  position: relative;
+  padding-left: var(--sp-6);
   padding-block: clamp(1.75rem, 3.5vw, 2.5rem);
   border-top: 1px solid var(--line);
 }
@@ -874,13 +880,16 @@ a:hover {
   border-bottom: 1px solid var(--line);
 }
 
-.step__num {
-  font-family: var(--font-display);
-  font-size: var(--fs-h3);
-  font-weight: 300;
-  color: var(--blue);
-  font-variant-numeric: tabular-nums;
-  line-height: 1.2;
+/* Aufzählungspunkt auf Höhe der Schrittüberschrift */
+.step::before {
+  content: '';
+  position: absolute;
+  left: 0.25rem;
+  top: calc(clamp(1.75rem, 3.5vw, 2.5rem) + 0.5em);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--blue);
 }
 
 .step h3 {
@@ -968,10 +977,11 @@ a:hover {
 .marks li::before {
   content: '';
   position: absolute;
-  left: 0;
-  top: 0.62em;
-  width: 1.1rem;
-  height: 1px;
+  left: 0.25rem;
+  top: 0.58em;
+  width: 0.4375rem;
+  height: 0.4375rem;
+  border-radius: 50%;
   background: var(--blue);
 }
 

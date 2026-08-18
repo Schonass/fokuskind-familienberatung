@@ -59,9 +59,13 @@ ist das Wurzelverzeichnis.
   Akzent, Logoschwarz `#16181f` als Leitfarbe, kühl gestimmte Neutrale
   (`#fcfcfe`, `#eff1f8`) dazwischen. Alle Text-Hintergrund-Paare erreichen
   mindestens WCAG AA.
-- **Logo** — führt Kopf- und Fussbereich (`logo.svg`, für dunklen Grund
-  einfarbig als `logo-invers.svg`). Beide Dateien sind auf die Palettenwerte
-  eingefärbt, damit Logo und Seite exakt denselben Blauton zeigen.
+- **Logo** — eröffnet die Startseite gross über der Hauptüberschrift und führt
+  Kopf- und Fussbereich (`logo.svg`, für dunklen Grund einfarbig als
+  `logo-invers.svg`). Beide Dateien sind auf die Palettenwerte eingefärbt,
+  damit Logo und Seite exakt denselben Blauton zeigen.
+- **Aufzählungen** — durchgehend runde Punkte im Markenblau, keine
+  Nummerierungen. Ein Zeichen für alle Listen: Themenfelder, Beratungsablauf
+  und Merkmalslisten.
 - **Signet** — die Kinder-Linienzeichnung aus dem Logo, freigestellt und als
   eigenständiges Bildzeichen (`assets/img/signet.svg`) für die Wasserzeichen
   in Seitenköpfen und Kontaktband verwendet.
